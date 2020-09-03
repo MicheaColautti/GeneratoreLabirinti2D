@@ -21,7 +21,9 @@ contenente il labirinto. Ho trovato un metodo esterno, (https://html2canvas.hert
 che è apparentemente in grado di svolgere questo compito.
 
 ##  Punto della situazione rispetto alla pianificazione
-
+Pianificazione non ancora eseguita
 
 ## Programma di massima per la prossima giornata di lavoro
 
+-Inizio concreto della documentazione, prevedo di arriavre almeno al capitolo 2.3 (Use case)
+-->Mi sono basato sul documento word fornita.
