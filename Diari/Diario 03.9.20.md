@@ -15,9 +15,9 @@
 |14:50 - 14.58 |Aggiornato "Problemi riscontrati e soluzioni adottate"     |
 
 ##  Problemi riscontrati e soluzioni adottate
-javascript non può salavre file, quindi avveo un pèroblema con il salvataggio del png
-contenente il labirinto. Ho trovato un "metodo" esterno, (https://html2canvas.hertzen.com/)
-che è apparentemente in grado di svolgere questo lavoro
+Javascript non può salavre file, quindi avevo un problema con il salvataggio del png
+contenente il labirinto. Ho trovato un metodo esterno, (https://html2canvas.hertzen.com/)
+che è apparentemente in grado di svolgere questo compito.
 
 ##  Punto della situazione rispetto alla pianificazione
 
