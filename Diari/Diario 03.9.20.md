@@ -2,7 +2,7 @@
 
 # GeneratoreLabirinti2D | Diario di lavoro
 ##### Michea Colautti
-### Trevano, 14:49
+### Trevano, 03.09.2020
 
 ## Lavori svolti
 
@@ -12,7 +12,8 @@
 |13:45 - 14:10 |Linguaggio scelto: Javascript                              |
 |14:10 - 14:20 |Trovato un modo per salavre le immagini in javascript      |
 |14:20 - 14.50 |Creato diario di lavoro giornaliero e modifica dello stesso|
-|14:50 - 15.05 |Aggiornato "Problemi riscontrati e soluzioni adottate"     |
+|14:50 - 15.00 |Aggiornato "Problemi riscontrati e soluzioni adottate"     |
+|15:00 - 15.06 |Correzione generale diario                                 |
 
 ##  Problemi riscontrati e soluzioni adottate
 Javascript non può salavre file, quindi avevo un problema con il salvataggio del png
