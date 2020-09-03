@@ -14,6 +14,8 @@
 |14:20 - 14.50 |Creato diario di lavoro giornaliero e modifica dello stesso|
 |14:50 - 15.00 |Aggiornato "Problemi riscontrati e soluzioni adottate"     |
 |15:00 - 15.06 |Correzione generale diario                                 |
+|15:10 - 15.20 |informazione genrela di quello che bisognava fare          |
+|15:20 - 15.40 |Ideee sulla documentazione e sui requisiti del progetto    |
 
 ##  Problemi riscontrati e soluzioni adottate
 Javascript non può salavre file, quindi avevo un problema con il salvataggio del png
