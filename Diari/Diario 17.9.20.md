@@ -22,3 +22,4 @@ Dato che ho concluso oggi il gantt sono nei tempi previsti
 ## Programma di massima per la prossima giornata di lavoro
 
 Cercherò di concludere la progettazione generale dell'applicazione (interfaccia grafica e controlli principali).
+(Completare QdC se avanza tempo)
