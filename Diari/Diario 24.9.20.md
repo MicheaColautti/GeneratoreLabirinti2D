@@ -7,8 +7,8 @@
 |Orario        |Lavoro svolto                                                  |
 |--------------|---------------------------------------------------------------|
 |10:05 - 11:35 |Sviluppo e completamento della GUI che verrà implementata      | 
-|12:30 - 13:50 |Sviluppo della progettazione generale dell'applicazione+chiarimento incomporensioni e problemi        |
-|13:50 - 14:45 |Completata progettazione generale dell'applicazione|
+|12:30 - 14:30 |Sviluppo della progettazione generale dell'applicazione+chiarimento incomporensioni e problemi        |
+|14:30 - 15:45 |Completata progettazione generale dell'applicazione|
 
 
 
