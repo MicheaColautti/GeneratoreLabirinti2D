@@ -8,8 +8,8 @@
 |--------------|---------------------------------------------------------|
 |10:05 - 11:35 |Ricerche per lo sviluppo della generazione del labirinto | 
 |12:30 - 13:20 |Teoria su Use Case                                       | 
-|12:20 - 13:50 |Progettazione di sistema di test                         |
-|13:50 - ??:?? |Sviluppo Use case                                        |
+|12:20 - 14:00 |Progettazione di sistema di test                         |
+|14:15 - ??:?? |Sviluppo Use case                                        |
  
 
 
