@@ -1,0 +1,97 @@
+<html>
+
+	<head>
+		<title>GeneratoreLabirinti2D</title>
+        <!--<link rel="shortcut icon" type="image/jpg" href="../Media/favicon.jpg">
+        <meta name=”description” content="Base, nav,header,footer">-->
+        <meta name="base" content="HTML,CSS,JavaScript,PHP">
+        <meta name="author" content="Michea Colautti">
+        <meta name="viewport" content="width" device-width, initial-scale="1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/pageStyle.css">
+        <!-- data creazione: 15.10.2020 ultima modifica: 15.10.20120-->
+        <!-- testato con chrome su MacOs Catalina(110.15.7): 15.10.20120-->
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="shortcut icon" type="image/jpg" href="../Media/favicon.jpg">
+        <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	</head>
+
+
+    <body>
+        <header>
+            Genratore di Labiriniti 2D<br>
+            <span id=text style="font-size: 30px;">Progetto Informatica 2020-2021</span>
+
+        </header>
+
+        <div id="controls">
+            <span id="riga1">
+                <select id="mShape" class="dropD">//maze Shape
+                    <option value='' selected>Forma labirinto</option>
+                    <option value='Rect'>Rettangolare</option>
+                    <option value='Circ'>Rotondo</option>
+                    <option value='Tria'>Triangolare</option>
+                    <option value='Esag'>Esagonale</option>
+                </select>
+               
+                <select id="pShape" class="dropD">//path Shape
+                    <option value='' selected>Forma percorsi</option>
+                    <option value='Rect'>Paralleli</option>
+                    <option value='Circ'>Curvilinei</option>
+                    <option value='Tria'>Trinagolari</option>
+                    <option value='Esag'>Esagonali</option>
+                </select>
+
+                <select id="sPos" class="dropD">//start Pos
+                    <option value='' selected>Posizione inzio</option>
+                    <option value='Este'>Esterno</option>
+                    <option value='Inte'>Centro</option>
+                </select>
+
+                <input type="checkbox" id="loop">Includi Loops<span style="margin-right: 60px;"></span>
+                
+                <input type="text" id="seed" placeholder="Seed..."><span style="margin-right: 60px;"></span>
+                <img src="media/mazeDown.png" style="width: 100px; height: 100px; vertical-align: center;">
+            </span>
+            <br><br>
+            <span id="riga2">
+               Lato 1 <input type="number" id="l1" class="num">
+               
+               
+               Soluzioni <input type="number" id="nSolu" class="num">
+               <select id="ePos" class="dropD" style="margin-right: 45px;">//end Pos
+                   <option value='' selected>Posizione fine</option>
+                   <option value='fEste'>Esterno</option>
+                   <option value='fInte'>Centro</option>
+                </select>
+
+                <button id="showSolu" >Mostra Soluzione</button>
+
+                <button id="saveParam" class="param" style="border-color:blue; color: blue;">Salva parametri</button>
+                <button id="loadParam" class="param" style="border-color:green;color: green;">Carica parametri</button>
+                
+                <span style="margin-left: 30px;"></span> 
+                Pixel <input type="number" id="nSolu" class="num" style="border-color:blue;">
+                
+            </span>
+            <br><br>
+            <span id="riga3">
+                Lato 2 <input type="number" id="l2" class="num">
+                
+            </span>
+            <br><br>
+            <button style="margin-left: 580px; border: 0px;" onclick="alert('gen')">
+                <img src="media/flash.png" style="width: 140px; height: 190px;">
+            </button>
+        </div>
+    
+        
+
+        <main>
+           <h1 id="text">Genara un labirinto</h1>
+        </main>
+        <footer>Michea Colautti I3AC</footer>
+    </body>
+</html>
