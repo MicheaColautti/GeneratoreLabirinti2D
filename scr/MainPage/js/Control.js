@@ -9,18 +9,28 @@ var startPos;
 var endPos;
 
 
+function showControl(){
+
+    var comp=document.getElementById("lato2");
+    if(document.getElementById("mShape").selectedIndex==1){
+        comp.style.display = "block";
+    }else{
+        comp.style.display = "none";
+    }
+
+}
+
 function getControls(){
+
     mazeShape=document.getElementById("mShape").value;
     pathShape=document.getElementById("pShape").value;
     startPos=document.getElementById("sPos").value;
     endPos=document.getElementById("ePos").value;
 
     if(isDropFull(mazeShape) && isDropFull(pathShape) && isDropFull(startPos) && isDropFull(endPos)){
-        //var x=document.getElementById("mazeShape").selectedIndex;
-        
-        
         l1=document.getElementById("l1").value;
         soluNum=document.getElementById("nSolu").value;
+
         if(isNumFull(l1) && isNumFull(soluNum)){
             
             loops=document.getElementById("loop").value;
@@ -30,25 +40,24 @@ function getControls(){
                 
                 if(mazeShape=="Rect"){
                     l2=document.getElementById("l2").value;
-                    if(isNumFull(l2)){
-                        alert("all OK!");
-                        generateMaze();
-                        
-                        
+                    if(isNumFull(l2)){                        
+                        return true;
+
                     }else{
-                        alert("Se la forma è rettangolare devi inserie 2 lati");
+                        return true;
                     }
                 }else{
-                    
+                    areValidParam();
                 }
             }else{
-                seed=Math.floor((Math.random()*1000000)+1);
+                seed=Math.floor((Math.floor(100000 + Math.random() * 900000)));
                 document.getElementById("seed").value=seed;
             }
             
         }else{
             alert('Inserisci il "Lato 1" e il numero di solouzioni');
         }
+        return false;
     }
 
     
@@ -77,6 +86,8 @@ function  isDropFull(control){
         return true
     } 
 }
+
+
 function isNumFull(num){
     if(Number.isNaN(num)){
        alert("Completa i campi testo in maniera opportuna");
@@ -89,7 +100,7 @@ function isNumFull(num){
         if(num>0){
             return true;
         }else{
-            alert("Insersci due numeri maggiori di 0");
+            alert("Insersci solo valori maggiori di 0");
             return false;
         }
     }
@@ -110,12 +121,11 @@ function isValidSeed(num){
         return false;
         
     }
-    if(num>100000){//6 digit seed
+    if(num>=100000){//6 digit seed
         return true;
     }else{
         
         alert("Il seed deve essere un numero a 6 cifre");
         return false;
     }
-
 }

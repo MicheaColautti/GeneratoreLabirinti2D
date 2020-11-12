@@ -123,6 +123,7 @@
         
     }
 
+
     #showSolu{
 
         border-width: 3px;
@@ -145,5 +146,13 @@
         margin-right: -5px;
 
     }
+
+    #controls{
+
+        left: 50%;
+        
+    }
+    
+
 
     

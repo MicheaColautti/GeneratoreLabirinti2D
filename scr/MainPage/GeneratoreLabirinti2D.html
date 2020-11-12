@@ -19,6 +19,7 @@
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <script src="js/Control.js"></script>
         <script src="js/Maze.js"></script>
+        <script src="js/CheckParam.js"></script>
 	</head>
 
 
@@ -28,10 +29,10 @@
             <span id=text style="font-size: 30px;">Progetto Informatica 2020-2021</span>
 
         </header>
-
+        
         <div id="controls">
             <span id="riga1">
-                <select id="mShape" class="dropD">//maze Shape
+                <select id="mShape" class="dropD" onchange="showControl()">//maze Shape
                     <option value='def' selected>Forma labirinto</option>
                     <option value='Rect'>Rettangolare</option>
                     <option value='Circ'>Rotondo</option>
@@ -64,10 +65,10 @@
             </span>
             <br><br>
             <span id="riga2">
-               Lato 1 <input type="number" id="l1" class="num" name="lato1" min="1">
+               Lato 1 <input type="number" id="l1" class="num" name="lato1" min="1" value="5">
+
                
-               
-               Soluzioni <input type="number" id="nSolu" class="num" min="1 ">
+               Soluzioni <input type="number" id="nSolu" class="num" min="1" value="1">
 
                <select id="ePos" class="dropD" style="margin-right: 45px;">//end Pos
                    <option value='def' selected>Posizione fine</option>
@@ -84,13 +85,16 @@
                     Carica parametri
                 </button>
                 
+                
                 <span style="margin-left: 30px;"></span> 
                 Pixel <input type="number" id="pxSize" name="pixel" class="num" style="border-color:blue;" min="4">
                 
             </span>
             <br><br>
             <span id="riga3">
-                Lato 2 <input type="number" id="l2" class="num" name="lat2" min="1">
+                <div id="lato2" style="display: none;">
+                    Lato 2 <input type="number" id="l2" class="num" name="lat2" min="1" value="5">
+                </div>
                 
             </span>
             <br><br>
@@ -98,9 +102,20 @@
 
             <img src="media/flash.png" id="genMaze" 
                 style="width: 140px; height: 190px; margin-left: 580px; border: 0px;" 
-                onclick="getControls()"
+                onclick="master()"
             >
         </div>
+            <script>
+
+                function master(){
+
+                    var dum=getControls();
+
+                    if(dum){
+                        areValidParam();
+                    }
+                }
+            </script>
     
         
 
