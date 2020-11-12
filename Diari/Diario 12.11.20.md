@@ -7,6 +7,7 @@
 |Orario        |Lavoro svolto                                           |
 |--------------|--------------------------------------------------------|
 |10:05 - 15:15 |Sviluppo logica per prelievo paramteri e risoluzione bug|
+|15:155 - 15:30 |ricerca algoritmo generazione |
 
 
 
