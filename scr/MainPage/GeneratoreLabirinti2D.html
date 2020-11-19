@@ -23,6 +23,8 @@
         <script src="js/Maze.js"></script>
         <script src="js/CheckParam.js"></script>
         <script src="js/Drag.js"></script>
+        <script src="js/Saving.js"></script>
+        <script src="js/Uploding.js"></script>
         
 	</head>
 
@@ -43,7 +45,7 @@
                     <option value='Tria'>Triangolare</option>
                     <option value='Esag'>Esagonale</option>
                 </select>
-               
+                <span style="margin-right: 30px;"></span>
                 <select id="pShape" class="dropD">//path Shape
                     <option value='def' selected>Forma percorsi</option>
                     <option value='Rect'>Paralleli</option>
@@ -52,46 +54,58 @@
                     <option value='Esag'>Esagonali</option>
                 </select>
 
+                <span style="margin-right: 30px;"></span>
                 <select id="sPos" class="dropD">//start Pos
                     <option value='def' selected>Posizione inzio</option>
-                    <option value='Este'>Esterno</option>
-                    <option value='Inte'>Centro</option>
+                    <option value='sEste'>Esterno</option>
+                    <option value='sInte'>Centro</option>
                 </select>
-
-                <input type="checkbox" id="loop">Includi Loops<span style="margin-right: 60px;"></span>
+                <span style="margin-right: 30px;"></span>
+                <input type="checkbox" id="loop">Includi Loops<span style="margin-right: 30px;"></span>
                 
-                <input type="number" id="seed" placeholder="6 Digit Seed..." min="100000"><span style="margin-right: 60px;"></span>
+                <input type="number" id="seed" placeholder="6 Digit Seed..." min="100000">
+
+                <span style="margin-left: 30px;"></span>
+
                 <img src="media/mazeDown.png" id="saveMaze"
                     style="width: 100px; height: 100px; vertical-align: center;" 
                     onclick="alert('save')"
                 >
+                <span style="margin-right: 30px;"></span>
 
             </span>
             <br><br>
             <span id="riga2">
+            <span style="margin-right: 80px;"></span>
                Lato 1 <input type="number" id="l1" class="num" name="lato1" min="1" value="5">
 
-               
+               <span style="margin-right: 30px;"></span>
                Soluzioni <input type="number" id="nSolu" class="num" min="1" value="1">
 
-               <select id="ePos" class="dropD" style="margin-right: 45px;">//end Pos
+               <span style="margin-right: 30px;"></span>
+               <select id="ePos" class="dropD" style="margin-right: 0px;">//end Pos
                    <option value='def' selected>Posizione fine</option>
                    <option value='fEste'>Esterno</option>
                    <option value='fInte'>Centro</option>
                 </select>
+                <span style="margin-right: 30px;"></span>
 
                 <button id="showSolu" >Mostra Soluzione</button>
+                <span style="margin-right: 30px;"></span>
 
-                <button id="saveParam" class="param" style="border-color:blue; color: blue;" onclick="alert('sal')">
+                <button id="saveParam" class="param" style="border-color:blue; color: blue;" 
+                onclick="master(0)">
                     Salva parametri
                 </button>
-                <button id="loadParam" class="param" style="border-color:green;color: green;" onclick="alert('load')">
-                    Carica parametri
+                <span style="margin-right: 10px;"></span>
+                <!--<input type="button" id="loadParam" class="param" style="border-color:green;color: green;">
+                    Carica parametri-->
+                    <input id="file" type="file"/>
                 </button>
                 
                 
                 <span style="margin-left: 30px;"></span> 
-                Pixel <input type="number" id="pxSize" name="pixel" class="num" style="border-color:blue;" min="4">
+                <!-- Pixel <input type="number" id="pxSize" name="pixel" class="num" style="border-color:blue;" min="4"> -->
                 
             </span>
             <br><br>
@@ -104,23 +118,44 @@
             <br><br>
 
             
-            <img src="media/flash.png" id="genMaze" 
+            <img src="media/flash.png" id="genMaze"
                 style="width: 140px; height: 190px; border: 0px;" 
-                onclick="master()"
+                onclick="master(1)"
             >
            
         </div>
         <script>           
-            function master(){
-                var dum=getControls();
-                if(dum){
-                    areValidParam();
+            function master(num){
+                
+                switch(num){
+                    case 0:
+                    
+                    if(getControls() && areValidParam()){
+                        var values=getControlsValue();
+                        /*
+                        * Accesso elemento:
+                        * values.mazeShape
+                        */
+
+                        saveParam(values);
+                    }
+
+                    break;
+
+                    case 1:
+                        
+                        var dum=getControls();
+                        if(dum){
+                            var dum2=areValidParam();
+                            if(dum2){
+                                maze(l1,l2,"maze");
+                            }
+                        }
+                    break;
                 }
             }
         </script>
-        
-        
-            <canvas id="canvas" style="border: 1px solid black;"></canvas>
+        <canvas id="maze"></canvas>
        
         <footer>Michea Colautti I3AC</footer>
     </body>

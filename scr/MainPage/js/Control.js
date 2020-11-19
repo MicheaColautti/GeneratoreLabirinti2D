@@ -33,7 +33,13 @@ function getControls(){
 
         if(isNumFull(l1) && isNumFull(soluNum)){
             
-            loops=document.getElementById("loop").value;
+            var cboxValue=document.getElementById("loop");
+            if (cboxValue.checked == true){
+                loops=true;
+            } else {
+                loops=false;
+            }
+
             seed=document.getElementById("seed").value;
 
             if(isValidSeed(seed)){
@@ -44,10 +50,10 @@ function getControls(){
                         return true;
 
                     }else{
-                        return true;
+                        return false;
                     }
                 }else{
-                    areValidParam();
+                    return true;
                 }
             }else{
                 seed=Math.floor((Math.floor(100000 + Math.random() * 900000)));
@@ -75,6 +81,24 @@ function getControls(){
         "pixels: "+pixels
     )*/
     //#endregion
+
+}
+
+function getControlsValue(){
+
+    var values = {
+        mazeShape: mazeShape, 
+        pathShape: pathShape, 
+        loops: loops, 
+        seed: seed, 
+        l1: l1,
+        l2: l2,
+        soluNum: soluNum, 
+        startPos: startPos,
+        endPos: endPos
+    };
+    
+    return(values);
 
 }
 

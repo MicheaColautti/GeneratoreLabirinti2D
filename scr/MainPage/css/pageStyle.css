@@ -148,13 +148,15 @@
 
     }
 
-    #controls{
+    .maze{
 
-        left: 50%;
+        width: 95%;
+        height: 60%;
+        border: 1px solid coral;
+        text-align: center;
+
     }
-    * { 
-        overflow: hidden; 
-    } 
+
 
 
     

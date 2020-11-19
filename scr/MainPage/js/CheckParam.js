@@ -10,9 +10,10 @@ function areValidParam() {
         var finPos=document.getElementById("ePos").selectedIndex;
 
         if(iniPos!=finPos){
-            alert("all OK!");
+            return true;
         }else{
             alert("La posizione iniziale deve differire dalla posizione finale");
+            return false;
         }
 
         
