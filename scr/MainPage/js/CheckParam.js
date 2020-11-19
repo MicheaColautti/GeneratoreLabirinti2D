@@ -15,6 +15,7 @@ function areValidParam() {
             alert("La posizione iniziale deve differire dalla posizione finale");
         }
 
+        
     }else{ 
         alert(
             "INSERISCI FORME COMPATIBILI:"+'\n'+

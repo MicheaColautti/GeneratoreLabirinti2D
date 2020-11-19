@@ -61,7 +61,7 @@ function getControls(){
     }
 
     
-    
+    //#region 
     /*alert(
         "mazeShape: "+mazeShape+"\n"+
         "pathShape: "+pathShape+"\n"+
@@ -74,6 +74,7 @@ function getControls(){
         "endPos: "+endPos+"\n"+
         "pixels: "+pixels
     )*/
+    //#endregion
 
 }
 
