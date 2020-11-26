@@ -25,6 +25,9 @@
         <script src="js/Drag.js"></script>
         <script src="js/Saving.js"></script>
         <script src="js/Uploding.js"></script>
+        <script src="js/Cell.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/addons/p5.sound.min.js"></script>
         
 	</head>
 
@@ -148,15 +151,19 @@
                         if(dum){
                             var dum2=areValidParam();
                             if(dum2){
-                                maze(l1,l2,"maze");
+                                var values=getControlsValue();
+                                
+                                setParam(l1,l2,values.mazeShape);
                             }
                         }
                     break;
                 }
             }
         </script>
-        <canvas id="maze"></canvas>
-       
+
+        <div style="text-align: center;">
+            <canvas id="maze" style="border: 1px solid black; width: 1000px;"></canvas>
+        </div>
         <footer>Michea Colautti I3AC</footer>
     </body>
 </html>

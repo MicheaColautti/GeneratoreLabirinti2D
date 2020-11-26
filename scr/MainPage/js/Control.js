@@ -8,7 +8,6 @@ var soluNum;
 var startPos;
 var endPos;
 
-
 function showControl(){
 
     var comp=document.getElementById("lato2");
@@ -39,14 +38,13 @@ function getControls(){
             } else {
                 loops=false;
             }
-
             seed=document.getElementById("seed").value;
-
             if(isValidSeed(seed)){
                 
                 if(mazeShape=="Rect"){
                     l2=document.getElementById("l2").value;
-                    if(isNumFull(l2)){                        
+                    if(isNumFull(l2)){
+                                                
                         return true;
 
                     }else{
@@ -99,7 +97,6 @@ function getControlsValue(){
     };
     
     return(values);
-
 }
 
 function  isDropFull(control){
@@ -129,13 +126,10 @@ function isNumFull(num){
             return false;
         }
     }
-    
-
 }
 
 function isValidSeed(num){
-
-    
+ 
     if(Number.isNaN(num)){
         alert("Il seed deve essere un numero a 6 cifre");
         return false;

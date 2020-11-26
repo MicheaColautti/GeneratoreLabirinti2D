@@ -1,6 +1,6 @@
 
     
-(function(){
+(function(){        
         function onChange(event) {
             var reader = new FileReader();
             reader.onload = onReaderLoad;
