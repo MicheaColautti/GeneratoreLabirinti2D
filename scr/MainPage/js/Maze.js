@@ -144,23 +144,22 @@ function helperRect(ctx,i){
     draw(ctx,posW,posH,interruptW,interruptH);
 }
 function draw(ctx,posW,posH,interruptW,interruptH){
-  
-    //#region FIRST STEP
-    //Disegna le line verticali
+  //#region FIRST STEP
+  //Disegna le line verticali
    
     ctx.beginPath();
     ctx.moveTo(posW, 0);
     ctx.lineTo(posW,cols-interruptW);
-      ctx.moveTo(posW, cols-interruptW+w);
-      ctx.lineTo(posW,cols);
+    ctx.moveTo(posW, cols-interruptW+w);
+    ctx.lineTo(posW,cols);
       
-      ctx.moveTo(posW+w, 0);
-      ctx.lineTo(posW+w,cols-interruptW);
-      ctx.moveTo(posW+w, cols-interruptW+w);
-      ctx.lineTo(posW+w,cols);
-      ctx.stroke();
+    ctx.moveTo(posW+w, 0);
+    ctx.lineTo(posW+w,cols-interruptW);
+    ctx.moveTo(posW+w, cols-interruptW+w);
+    ctx.lineTo(posW+w,cols);
+    ctx.stroke();
     
-      //Disegna le line orizzontaale
+    //Disegna le line orizzontaale
       ctx.moveTo(0, posH);
       ctx.lineTo(rows-interruptH,posH);
       ctx.moveTo(rows-interruptH+w, posH);
@@ -210,8 +209,10 @@ function draw(ctx,posW,posH,interruptW,interruptH){
 //#endregion
 //#region Heper for Circ
 function helperCirc(ctx,arco,canvas){
-  var circNum=(findNum(0,5));
+  var circNum=findNum(0,5);
   var circSizes=cols/circNum;
+  var radNum=findNum(1,4)*2;
+  var amp=360/radNum;
   
   for(var i=0;i<=circNum;i++){
     //ctx.beginPath();    
