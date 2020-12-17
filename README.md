@@ -17,7 +17,7 @@ L’utente non deve solo avere la possibilità di salvare i parametri oppure un 
 
 
 #### Mandato:
-Mandato: [QdC_Primo Semestre - GeneratoreLabirinti2D-Colautti](Documenti/QdC_PrimoSemestre-GeneratoreLabirinti2D-Colautti.docx)
+Mandato: [QdC_Primo Semestre - GeneratoreLabirinti2D-Colautti](Documenti/QdC_Primo_Semestre_GeneratoreLabirinti2D_Colautti.docx)
 
 #### Struttura:
 - [Codice](scr/)
