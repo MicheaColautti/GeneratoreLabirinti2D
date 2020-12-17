@@ -17,7 +17,7 @@ L’utente non deve solo avere la possibilità di salvare i parametri oppure un 
 
 
 #### Mandato:
-Mandato: [QdC_SecondoSemestre-ScanSpect.pdf](Documenti/muggiasca_qdc_scanspect.pdf)
+Mandato: [QdC_Primo Semestre - GeneratoreLabirinti2D-Colautti](/Documenti/QdC_Primo Semestre - GeneratoreLabirinti2D-Colautti.docx)
 
 #### Struttura:
 - [Codice](scr/)
