@@ -6,21 +6,20 @@ var canvas;
 var pShape;
 var seed;
 var width;
+
 function setParam(values){
-    
-    cols=values.l1*w;
-    if (typeof values.l2 !== 'undefined'){
-      rows=values.l2*w;
-    }
-    mShape=values.mazeShape;
-    pShape=values.pathShape;
-    seed=values.seed;
-    document.getElementById("maze");
-    generateMaster();
-    
+  
+  cols=values.l1*w;
+  if (typeof values.l2 !== 'undefined'){
+    rows=values.l2*w;
+  }
+  mShape=values.mazeShape;
+  pShape=values.pathShape;
+  seed=values.seed;
+  document.getElementById("maze");
+  generateMaster();   
 }
     
-
 
 function generateMaster() {
 
@@ -52,8 +51,6 @@ function genrateRect(ctx){
   ctx.stroke();
   ctx.stroke();
   helperRect(ctx,0);
-  // helperRect(ctx,9);
-
 }
 
 function generateCiric(ctx,canvas){
@@ -143,6 +140,7 @@ function helperRect(ctx,i){
     //#endregion
     draw(ctx,posW,posH,interruptW,interruptH);
 }
+
 function draw(ctx,posW,posH,interruptW,interruptH){
   //#region FIRST STEP
   //Disegna le line verticali
@@ -160,47 +158,45 @@ function draw(ctx,posW,posH,interruptW,interruptH){
     ctx.stroke();
     
     //Disegna le line orizzontaale
-      ctx.moveTo(0, posH);
-      ctx.lineTo(rows-interruptH,posH);
-      ctx.moveTo(rows-interruptH+w, posH);
-      ctx.lineTo(rows,posH);
+    ctx.moveTo(0, posH);
+    ctx.lineTo(rows-interruptH,posH);
+    ctx.moveTo(rows-interruptH+w, posH);
+    ctx.lineTo(rows,posH);
     
-      ctx.moveTo(0, posH+w);
-      ctx.lineTo(rows-interruptH,posH+w);
-      ctx.moveTo(rows-interruptH+w, posH+w);
-      ctx.lineTo(rows,posH+w);
+    ctx.moveTo(0, posH+w);
+    ctx.lineTo(rows-interruptH,posH+w);
+    ctx.moveTo(rows-interruptH+w, posH+w);
+    ctx.lineTo(rows,posH+w);
       
       
 
     //#endregion
+    ctx.moveTo(rows-interruptH, cols-interruptW);
+    ctx.lineTo(0,cols-interruptW);
+    ctx.moveTo(rows-interruptH, cols-interruptW+w);
+    ctx.lineTo(0,cols-interruptW+w);
 
-      ctx.moveTo(rows-interruptH, cols-interruptW);
-      ctx.lineTo(0,cols-interruptW);
+    ctx.moveTo(cols-interruptH+w, cols-interruptW);
+    ctx.lineTo(cols,cols-interruptW);
 
-      ctx.moveTo(rows-interruptH, cols-interruptW+w);
-      ctx.lineTo(0,cols-interruptW+w);
+    ctx.moveTo(cols-interruptH+w, cols-interruptW+w);
+    ctx.lineTo(cols,cols-interruptW+w);      
 
-      ctx.moveTo(cols-interruptH+w, cols-interruptW);
-      ctx.lineTo(cols,cols-interruptW);
-
-      ctx.moveTo(cols-interruptH+w, cols-interruptW+w);
-      ctx.lineTo(cols,cols-interruptW+w);      
-
-      ctx.moveTo(cols-interruptW, 0);
-      ctx.lineTo(cols-interruptW,rows);
+    ctx.moveTo(cols-interruptW, 0);
+    ctx.lineTo(cols-interruptW,rows);
       
-      ctx.moveTo(cols-interruptW+w, 0);
-      ctx.lineTo(cols-interruptW+w,rows);
+    ctx.moveTo(cols-interruptW+w, 0);
+    ctx.lineTo(cols-interruptW+w,rows);
 
   
     
-      ctx.stroke();
-      ctx.stroke();
-      //svuota percorso orizzontale
-      ctx.clearRect(1, posH+1, rows-2, w-2.5);
+    ctx.stroke();
+    ctx.stroke();
+    //svuota percorso orizzontale
+    ctx.clearRect(1, posH+1, rows-2, w-2.5);
         
-      //Svuota percorso verticale
-      ctx.clearRect(posW+1, 1, w-2, cols-2);
+    //Svuota percorso verticale
+    ctx.clearRect(posW+1, 1, w-2, cols-2);
 }
 
 

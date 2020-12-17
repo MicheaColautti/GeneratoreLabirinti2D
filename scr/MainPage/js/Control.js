@@ -1,3 +1,4 @@
+
 var mazeShape;
 var pathShape;
 var loops;
@@ -64,21 +65,6 @@ function getControls(){
         return false;
     }
 
-    
-    //#region 
-    /*alert(
-        "mazeShape: "+mazeShape+"\n"+
-        "pathShape: "+pathShape+"\n"+
-        "loops: "+loops+"\n"+
-        "seed: "+seed+"\n"+
-        "l1: "+l1+"\n"+
-        "l2: "+l2+"\n"+
-        "soluNum: "+soluNum+"\n"+
-        "startPos: "+startPos+"\n"+
-        "endPos: "+endPos+"\n"+
-        "pixels: "+pixels
-    )*/
-    //#endregion
 
 }
 
@@ -112,7 +98,7 @@ function  isDropFull(control){
 
 function isNumFull(num){
     if(Number.isNaN(num)){
-       alert("Completa i campi testo in maniera opportuna");
+       alert("Completa i campi numero in maniera opportuna");
        return false;
     }
     
